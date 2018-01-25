@@ -1,0 +1,229 @@
+EESchema Schematic File Version 2
+LIBS:can_bus_proj-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:can_bus_proj_components
+LIBS:texasF5529
+LIBS:tm-kicad-lib
+LIBS:can_bus_proj-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 3700 1600 2    60   BiDi ~ 0
+DLC_CAN_HI
+Text GLabel 3700 1800 2    60   BiDi ~ 0
+DLC_CAN_LO
+$Comp
+L MCP2551-I/SN U1
+U 1 1 56F5CC1D
+P 2050 1700
+F 0 "U1" H 1650 2050 50  0000 L CNN
+F 1 "MCP2551-I/SN" H 2150 2050 50  0000 L CNN
+F 2 "8-SOIC" H 2050 1700 50  0000 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21667f.pdf" H 2050 1700 50  0001 C CNN
+F 4 "MCP2551T-E/SN" H 2050 1700 60  0001 C CNN "PN"
+	1    2050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR22
+U 1 1 56F5CC24
+P 2050 2150
+F 0 "#PWR22" H 2050 1900 50  0001 C CNN
+F 1 "GND" H 2050 2000 50  0000 C CNN
+F 2 "" H 2050 2150 50  0000 C CNN
+F 3 "" H 2050 2150 50  0000 C CNN
+	1    2050 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2100 2050 2150
+$Comp
+L R R16
+U 1 1 56F5CC2B
+P 1700 2150
+F 0 "R16" V 1780 2150 50  0000 C CNN
+F 1 "4.7k" V 1700 2150 50  0000 C CNN
+F 2 "" V 1630 2150 50  0000 C CNN
+F 3 "" H 1700 2150 50  0000 C CNN
+	1    1700 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 2150 1850 2150
+Wire Wire Line
+	1550 1900 1550 2150
+Text GLabel 1500 1500 0    39   Output ~ 0
+CAN_RX
+Text GLabel 1500 1600 0    39   Input ~ 0
+CAN_TX
+Wire Wire Line
+	1500 1600 1550 1600
+Wire Wire Line
+	1500 1500 1550 1500
+Text GLabel 2000 1100 0    60   Input ~ 0
+5V_SW
+Wire Wire Line
+	2000 1100 2600 1100
+Wire Wire Line
+	2050 1100 2050 1300
+$Comp
+L C_Small C8
+U 1 1 56F5CC3C
+P 2700 1100
+F 0 "C8" H 2710 1170 50  0000 L CNN
+F 1 "1uF" H 2710 1020 50  0000 L CNN
+F 2 "" H 2700 1100 50  0000 C CNN
+F 3 "" H 2700 1100 50  0000 C CNN
+	1    2700 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR24
+U 1 1 56F5CC43
+P 2850 1150
+F 0 "#PWR24" H 2850 900 50  0001 C CNN
+F 1 "GND" H 2850 1000 50  0000 C CNN
+F 2 "" H 2850 1150 50  0000 C CNN
+F 3 "" H 2850 1150 50  0000 C CNN
+	1    2850 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1150 2850 1100
+Wire Wire Line
+	2850 1100 2800 1100
+Connection ~ 2050 1100
+Wire Wire Line
+	2550 1600 3700 1600
+Wire Wire Line
+	2550 1800 3700 1800
+$Comp
+L C_Small C7
+U 1 1 56F5CC52
+P 2650 2500
+F 0 "C7" H 2660 2570 50  0000 L CNN
+F 1 "560pF" H 2660 2420 50  0000 L CNN
+F 2 "" H 2650 2500 50  0000 C CNN
+F 3 "" H 2650 2500 50  0000 C CNN
+	1    2650 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R17
+U 1 1 56F5CC59
+P 2650 2200
+F 0 "R17" V 2730 2200 50  0000 C CNN
+F 1 "100" V 2650 2200 50  0000 C CNN
+F 2 "" V 2580 2200 50  0000 C CNN
+F 3 "" H 2650 2200 50  0000 C CNN
+	1    2650 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR23
+U 1 1 56F5CC60
+P 2650 2650
+F 0 "#PWR23" H 2650 2400 50  0001 C CNN
+F 1 "GND" H 2650 2500 50  0000 C CNN
+F 2 "" H 2650 2650 50  0000 C CNN
+F 3 "" H 2650 2650 50  0000 C CNN
+	1    2650 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2650 2650 2600
+Wire Wire Line
+	2650 2400 2650 2350
+Wire Wire Line
+	2650 2050 2650 1600
+Connection ~ 2650 1600
+$Comp
+L C_Small C9
+U 1 1 56F5CC6A
+P 2950 2500
+F 0 "C9" H 2960 2570 50  0000 L CNN
+F 1 "560pF" H 2960 2420 50  0000 L CNN
+F 2 "" H 2950 2500 50  0000 C CNN
+F 3 "" H 2950 2500 50  0000 C CNN
+	1    2950 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R18
+U 1 1 56F5CC71
+P 2950 2200
+F 0 "R18" V 3030 2200 50  0000 C CNN
+F 1 "100" V 2950 2200 50  0000 C CNN
+F 2 "" V 2880 2200 50  0000 C CNN
+F 3 "" H 2950 2200 50  0000 C CNN
+	1    2950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR25
+U 1 1 56F5CC78
+P 2950 2650
+F 0 "#PWR25" H 2950 2400 50  0001 C CNN
+F 1 "GND" H 2950 2500 50  0000 C CNN
+F 2 "" H 2950 2650 50  0000 C CNN
+F 3 "" H 2950 2650 50  0000 C CNN
+	1    2950 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2650 2950 2600
+Wire Wire Line
+	2950 2400 2950 2350
+Wire Wire Line
+	2950 2050 2950 1800
+Connection ~ 2950 1800
+Text Notes 3150 1100 0    60   ~ 0
+CAN TRANSCEIVER
+Wire Notes Line
+	1050 950  1050 2850
+Wire Notes Line
+	1050 2850 4350 2850
+Wire Notes Line
+	4350 2850 4350 950 
+Wire Notes Line
+	4350 950  1050 950 
+$EndSCHEMATC

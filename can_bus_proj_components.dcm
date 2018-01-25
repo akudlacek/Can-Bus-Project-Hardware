@@ -1,0 +1,25 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATSAMD21J18A-AU
+D SAMD21J18A-AU, TQFP64, 256k Flash, 32k SRAM, 48MHz, CortexM0+
+K ARM 32bit Microcontroller 48MHz CortexM0+
+F http://www.atmel.com/Images/Atmel-42181-SAM-D21_Datasheet.pdf
+$ENDCMP
+#
+$CMP PESD1CAN
+D CAN bus ESD protection diode
+K CAN ESD DIODE SOT23
+F http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf
+$ENDCMP
+#
+$CMP STN1110-I/SO
+D Multiprotocol OBD to UART Interpreter, SOIC-28
+K STN1110
+F https://www.scantool.net/scantool/downloads/97/stn1110-ds.pdf
+$ENDCMP
+#
+$CMP TPS2113
+F http://www.ti.com/lit/ds/symlink/tps2113.pdf
+$ENDCMP
+#
+#End Doc Library
